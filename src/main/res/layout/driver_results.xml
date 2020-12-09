@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:elevation="6dp"
+    app:cardCornerRadius="10dp"
+    app:cardPreventCornerOverlap="true"
+
+
+
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:id="@+id/nameOfRider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="5dp"
+
+            android:background="#C7C7C7"
+
+            android:drawableStart="@drawable/icons8_user_group_man_woman_24px"
+            android:drawablePadding="10dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+
+
+            android:maxLength="19"
+            android:maxLines="1"
+            android:paddingVertical="2dp"
+            android:text="TextView"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:orientation="vertical">
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/driver_pro_picture_map"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_gravity="center_vertical|start"-->
+<!--                    android:padding="10dp"-->
+
+<!--                    android:scaleType="centerCrop"-->
+<!--                    app:srcCompat="@drawable/icons8_cat_profile_60px" />-->
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/userImage_in_driver_results"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="5dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="5dp"
+
+                    android:layout_gravity="center_vertical"
+
+                    android:src="@drawable/icons8_cat_profile_60px"
+
+
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.dpro.widgets.WeekdaysPicker
+                    android:id="@+id/weekdays_driver_results"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    app:sunday_first_day="false"
+
+
+
+
+                    >
+
+
+                </com.dpro.widgets.WeekdaysPicker>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/timeOfRider"
+                        android:layout_width="134dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="8dp"
+                        android:drawableStart="@drawable/ic_access_time_black_24dp"
+                        android:drawablePadding="4dp"
+                        android:gravity="center_vertical"
+
+                        android:maxLength="16"
+
+                        android:text="TextView"
+                        android:textSize="15sp"
+                        android:textStyle="bold|italic"
+                        android:layout_column="0"
+                        />
+
+                    <Button
+                        android:id="@+id/reqested_pending"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:visibility="visible"
+                        android:text="Available"
+                        android:textColor="@android:color/white"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="15dp"
+                        android:background="@drawable/req_pending_available"
+                        android:textStyle="bold|italic"
+                        android:layout_weight="1"
+                        android:layout_column="1"
+
+
+                        />
+                </TableRow>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
